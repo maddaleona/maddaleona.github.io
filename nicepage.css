@@ -34619,11 +34619,11 @@ a.u-link.u-text-hover-grey-90:hover {
 
 /*end-variables sitestylecss*/
 .u-header .u-sheet-1 {
-  min-height: 67px;
+  min-height: 50px;
 }
 
 .u-header .u-menu-1 {
-  margin: 20px 0 11px auto;
+  margin: 20px 0 0 auto;
 }
 
 .u-header .u-nav-1 {
