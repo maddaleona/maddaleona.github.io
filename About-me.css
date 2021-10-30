@@ -4,7 +4,7 @@
 }
 
 .u-section-1 .u-sheet-1 {
-  min-height: 600px;
+  min-height: 1204px;
 }
 
 .u-section-1 .u-layout-wrap-1 {
@@ -69,7 +69,7 @@
 
 @media (max-width: 1199px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 530px;
+    min-height: 1134px;
   }
 
   .u-section-1 .u-layout-wrap-1 {
