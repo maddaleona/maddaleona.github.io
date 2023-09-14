@@ -93,11 +93,13 @@
   padding: 0 30px;
 }
 
-.u-section-1 .u-image-6 {
+.u-section-1 .u-layout-cell-7 {
   min-height: 378px;
   transition-duration: 1.5s;
+}
+
+.u-section-1 .u-image-6 {
   background-image: url("images/photo_2023-09-14_12-14-02_cut.jpg");
-  background-position: 50% 50%;
 }
 
 .u-section-1 .u-container-layout-7 {
@@ -178,7 +180,7 @@
     min-height: 303px;
   }
 
-  .u-section-1 .u-image-6 {
+  .u-section-1 .u-layout-cell-7 {
     background-position: 100% 50%;
     min-height: 312px;
   }
@@ -227,7 +229,7 @@
     min-height: 232px;
   }
 
-  .u-section-1 .u-image-6 {
+  .u-section-1 .u-layout-cell-7 {
     min-height: 239px;
   }
 
@@ -290,7 +292,7 @@
     padding-right: 10px;
   }
 
-  .u-section-1 .u-image-6 {
+  .u-section-1 .u-layout-cell-7 {
     min-height: 538px;
   }
 
@@ -338,7 +340,7 @@
     min-height: 329px;
   }
 
-  .u-section-1 .u-image-6 {
+  .u-section-1 .u-layout-cell-7 {
     min-height: 339px;
   }
 
