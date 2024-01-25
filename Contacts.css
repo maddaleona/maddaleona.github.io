@@ -31,9 +31,9 @@
 .u-section-1 .u-social-icons-1 {
   height: 119px;
   min-height: 16px;
-  width: 505px;
+  width: 506px;
   min-width: 94px;
-  margin: 14px auto 60px;
+  margin: 39px auto 60px;
 }
 
 .u-section-1 .u-icon-1 {
@@ -55,6 +55,10 @@
 @media (max-width: 1199px) {
   .u-section-1 .u-group-1 {
     height: auto;
+  }
+
+  .u-section-1 .u-social-icons-1 {
+    width: 505px;
   }
 }
 
@@ -81,4 +85,6 @@
     margin-left: 0;
     margin-right: 0;
   }
+}.u-section-2 .u-sheet-1 {
+  min-height: 400px;
 }
