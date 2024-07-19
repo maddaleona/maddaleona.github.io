@@ -4,7 +4,7 @@
 }
 
 .u-section-1 .u-sheet-1 {
-  min-height: 634px;
+  min-height: 1250px;
 }
 
 .u-section-1 .u-text-1 {
@@ -33,7 +33,7 @@
   min-height: 16px;
   width: 635px;
   min-width: 120px;
-  margin: 29px auto 5px;
+  margin: 29px auto 0;
 }
 
 .u-section-1 .u-icon-1 {
@@ -76,7 +76,6 @@
     height: 99px;
     width: 534px;
     margin-top: 54px;
-    margin-bottom: 0;
   }
 }
 
@@ -96,6 +95,4 @@
     margin-top: 53px;
     margin-bottom: 42px;
   }
-}.u-section-2 .u-sheet-1 {
-  min-height: 400px;
 }
