@@ -14,10 +14,10 @@
 }
 
 .u-section-1 .u-group-1 {
-  width: 510px;
-  min-height: 250px;
+  width: 669px;
+  min-height: 328px;
   height: auto;
-  margin: 14px auto 0;
+  margin: 29px auto 0;
 }
 
 .u-section-1 .u-image-1 {
@@ -31,9 +31,9 @@
 .u-section-1 .u-social-icons-1 {
   height: 119px;
   min-height: 16px;
-  width: 506px;
-  min-width: 94px;
-  margin: 39px auto 60px;
+  width: 635px;
+  min-width: 120px;
+  margin: 29px auto 5px;
 }
 
 .u-section-1 .u-icon-1 {
@@ -52,26 +52,39 @@
   height: 119px;
 }
 
+.u-section-1 .u-icon-5 {
+  height: 100%;
+  color: rgb(0, 137, 203) !important;
+}
+
 @media (max-width: 1199px) {
   .u-section-1 .u-group-1 {
     height: auto;
   }
-
-  .u-section-1 .u-social-icons-1 {
-    width: 505px;
-  }
 }
 
 @media (max-width: 767px) {
+  .u-section-1 .u-group-1 {
+    width: 540px;
+  }
+
   .u-section-1 .u-container-layout-1 {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .u-section-1 .u-social-icons-1 {
+    height: 99px;
+    width: 534px;
+    margin-top: 54px;
+    margin-bottom: 0;
   }
 }
 
 @media (max-width: 575px) {
   .u-section-1 .u-text-1 {
     font-size: 1.875rem;
+    margin-top: 91px;
   }
 
   .u-section-1 .u-group-1 {
@@ -79,11 +92,10 @@
   }
 
   .u-section-1 .u-social-icons-1 {
-    height: 78px;
-    width: 340px;
-    margin-top: 38px;
-    margin-left: 0;
-    margin-right: 0;
+    height: 58px;
+    width: 331px;
+    margin-top: 53px;
+    margin-bottom: 42px;
   }
 }.u-section-2 .u-sheet-1 {
   min-height: 400px;
