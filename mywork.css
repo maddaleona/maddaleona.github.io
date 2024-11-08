@@ -1,0 +1,149 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Contenitore principale */
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Colonna sinistra (testo) */
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-box {
+    width: 100%;
+}
+
+.fake-title {
+    color: magenta;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.real-par {
+    color: white;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Colonna destra (due immagini) */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-box {
+    width: 100%;
+    height: 350px; /* Altezza fissa per ogni immagine */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Effetto hover per l'immagine */
+.image-box:hover img {
+    transform: scale(1.1);
+}
+
+/* Barra di navigazione */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: magenta;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: magenta;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after, .navbar .active::after {
+    width: 100%;
+}
+
+/* Media Queries */
+
+/* Media Query per schermi tra 1024px e 767px */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Cambiato da grid-template-columns a flex-direction */
+        gap: 20px; /* Aggiunto gap per separare le colonne */
+    }
+}
+
+/* Media Query per schermi più piccoli di 767px */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column; /* Cambiato da grid-template-columns a flex-direction */
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
