@@ -36,6 +36,7 @@ body, html {
     flex-direction: column; /* Disporre gli elementi in colonna */
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 }
 
 /* Blocchi specifici */
@@ -67,6 +68,10 @@ body, html {
     transform: scale(1.1);
 }
 
+.block:hover i {
+    transform: scale(1.5);  /* Ingrandisce l'icona del 50% */
+  }
+
 /* Colored Link */
 .link-hover {
     color: magenta;
@@ -77,6 +82,7 @@ body, html {
 .link-hover:hover {
     color: lightblue;
 }
+
 
 /* Barra di navigazione */
 .navbar {
