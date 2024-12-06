@@ -68,10 +68,6 @@ body, html {
     transform: scale(1.1);
 }
 
-.block:hover i {
-    transform: scale(1.5);  /* Ingrandisce l'icona del 50% */
-  }
-
 /* Colored Link */
 .link-hover {
     color: magenta;
