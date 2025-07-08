@@ -5,25 +5,25 @@
     box-sizing: border-box;
 }
 body, html {
-    min-height: 100vh;
-    padding-bottom: 80px;
+    height: 100vh;
     background-color: black;
     color: white;
     font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    overflow: hidden; /* Previene lo scroll */
 }
 /* Contenitore principale */
 .container {
     display: flex;
     max-width: 1200px;
     width: 100%;
+    height: calc(100vh - 80px); /* Altezza totale meno navbar */
     gap: 20px;
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 0;
 }
 /* Colonna sinistra (testo) */
 .left-column {
@@ -55,7 +55,7 @@ body, html {
 }
 .image-box {
     width: 100%;
-    height: 350px; /* Altezza fissa per ogni immagine */
+    height: calc((100vh - 120px) / 2); /* Metà dell'altezza disponibile meno gap */
     overflow: hidden;
     border-radius: 8px;
 }
@@ -121,8 +121,12 @@ body, html {
 }
 /* Media Query per schermi più piccoli di 767px */
 @media (max-width: 767px) {
+    body, html {
+        overflow-y: auto; /* Permette lo scroll su mobile */
+    }
     .container {
         flex-direction: column; /* Cambiato da grid-template-columns a flex-direction */
+        height: auto; /* Permette contenuto più alto su mobile */
     }
     .navbar ul {
         flex-direction: column;
@@ -130,7 +134,7 @@ body, html {
     }
     /* Riduci l'altezza delle immagini su mobile */
     .image-box {
-        height: 250px; /* Invece di 350px */
+        height: 250px; /* Altezza fissa su mobile */
     }
 }
 /* Per schermi molto piccoli */
