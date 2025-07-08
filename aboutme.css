@@ -5,15 +5,15 @@
     box-sizing: border-box;
 }
 body, html {
-    min-height: 100vh;
-    padding-bottom: 80px;
+    height: 100vh;
     background-color: black;
     color: white;
     font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    overflow: hidden; /* Previene lo scroll su desktop */
 }
 /* Grid Container */
 .container {
@@ -22,9 +22,10 @@ body, html {
     padding: 10px;
     width: 100%;
     max-width: 1200px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-template-rows: auto; /* Makes sure the rows will adapt */
-    margin-bottom: 20px;
+    height: calc(100vh - 80px); /* Altezza totale meno navbar */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 0;
 }
 /* Blocchi */
 .block {
@@ -60,7 +61,13 @@ body, html {
     position: relative;
     text-align: center;
     padding: 20px;
-    height: 400px; /* Altezza fissa per tutti i blocchi */
+    height: 100%; /* Usa tutta l'altezza disponibile della cella */
+}
+
+/* Blocco 1 speciale per il testo - permette overflow */
+.block1 {
+    overflow-y: auto; /* Permette scroll interno se il testo è troppo lungo */
+    padding: 15px;
 }
 /* Immagini */
 .block img {
@@ -127,25 +134,47 @@ body, html {
 /* Media Queries */
 @media (max-width: 1024px) {
     .container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr); /* 8 blocchi = 3x3 con uno vuoto */
     }
 }
 @media (max-width: 767px) {
+    body, html {
+        overflow-y: auto; /* Permette lo scroll su mobile */
+    }
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, minmax(200px, auto));
+        height: auto; /* Permette contenuto più alto su mobile */
     }
     .navbar ul {
         flex-direction: column;
         gap: 20px;
     }
-    /* Riduci l'altezza dei blocchi su mobile */
-    .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8 {
-        height: 250px; /* Invece di 400px */
+    /* Font più piccoli su mobile per il testo */
+    .fake-title {
+        font-size: 20px;
+    }
+    .real-par {
+        font-size: 13px;
+    }
+    /* Block1 con altezza minima per leggibilità */
+    .block1 {
+        min-height: 200px;
+        height: auto;
     }
 }
 /* Per schermi molto piccoli */
 @media (max-width: 480px) {
-    .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8 {
-        height: 200px; /* Ancora più piccoli */
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, minmax(180px, auto));
+    }
+    .fake-title {
+        font-size: 18px;
+    }
+    .real-par {
+        font-size: 12px;
+        line-height: 1.4;
     }
 }
