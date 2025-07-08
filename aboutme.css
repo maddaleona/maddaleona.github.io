@@ -74,6 +74,14 @@ body, html {
     flex-direction: column;
     justify-content: center;
 }
+
+.block1 {
+    align-items: flex-start !important;  /* Allinea a sinistra */
+}
+.block3 {
+    align-items: flex-end !important;    /* Allinea a destra */
+}
+
 .block1 .fake-title {
     text-align: left !important;
 }
