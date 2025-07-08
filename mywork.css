@@ -37,13 +37,13 @@ body, html {
 }
 .fake-title {
     color: magenta;
-    font-size: 21px;
+    font-size: 25px;
     font-weight: bolder;
     text-align: left;
 }
 .real-par {
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     text-align: left;
 }
 /* Colonna destra (due immagini) */
@@ -136,10 +136,24 @@ body, html {
     .image-box {
         height: 250px; /* Altezza fissa su mobile */
     }
+    /* Font più piccoli su mobile per il testo */
+    .fake-title {
+        font-size: 20px;
+    }
+    .real-par {
+        font-size: 13px;
+    }
 }
 /* Per schermi molto piccoli */
 @media (max-width: 480px) {
     .image-box {
         height: 200px; /* Ancora più piccole */
+    }
+    .fake-title {
+        font-size: 18px;
+    }
+    .real-par {
+        font-size: 12px;
+        line-height: 1.4;
     }
 }
