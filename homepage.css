@@ -5,15 +5,15 @@
     box-sizing: border-box;
 }
 body, html {
-    min-height: 100vh;
-    padding-bottom: 80px;
+    height: 100vh;
     background-color: black;
     color: white;
     font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    overflow: hidden; /* Previene lo scroll */
 }
 /* Grid Container */
 .container {
@@ -22,9 +22,10 @@ body, html {
     padding: 10px;
     width: 100%;
     max-width: 1200px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-template-rows: auto; /* Makes sure the rows will adapt */
-    margin-bottom: 20px;
+    height: calc(100vh - 80px); /* Altezza totale meno navbar */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-bottom: 0;
 }
 /* Blocchi */
 .block {
@@ -60,7 +61,7 @@ body, html {
     position: relative;
     text-align: center;
     padding: 20px;
-    height: 250px; /* Altezza fissa per tutti i blocchi */
+    height: 100%; /* Usa tutta l'altezza disponibile della cella */
 }
 /* Immagini */
 .block img {
@@ -127,27 +128,28 @@ body, html {
 /* Media Queries */
 @media (max-width: 1024px) {
     .container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     }
 }
 @media (max-width: 767px) {
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        height: auto; /* Permette lo scroll su mobile */
+    }
+    body, html {
+        overflow-y: auto; /* Permette lo scroll su mobile */
     }
     .navbar ul {
         flex-direction: column;
         gap: 20px;
     }
-    /* Riduci l'altezza dei blocchi su mobile */
-    .block1, .block2, .block3, .block4, .block5, .block6, 
-    .block7, .block8, .block9, .block10, .block11, .block12 {
-        height: 200px; /* Invece di 250px */
-    }
 }
 /* Per schermi molto piccoli */
 @media (max-width: 480px) {
-    .block1, .block2, .block3, .block4, .block5, .block6, 
-    .block7, .block8, .block9, .block10, .block11, .block12 {
-        height: 150px; /* Ancora più piccoli */
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, minmax(150px, auto));
     }
 }
