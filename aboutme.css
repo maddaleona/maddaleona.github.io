@@ -74,6 +74,15 @@ body, html {
     flex-direction: column;
     justify-content: center;
 }
+.block1 .fake-title {
+    text-align: left !important;
+}
+.block1 .real-par {
+    text-align: left !important;
+}
+.block3 .real-par {
+    text-align: right !important;
+}
 /* Immagini */
 .block img {
     width: 100%;
