@@ -39,14 +39,14 @@ body, html {
 }
 .fake-title {
     color: magenta;
-    font-size: 22px; /* Ridotto da 25px */
+    font-size: 25px; /* Ridotto da 25px */
     font-weight: bolder;
     text-align: center;
     margin-bottom: 10px; /* Aggiunto spazio sotto il titolo */
 }
 .real-par {
     color: white;
-    font-size: 14px; /* Ridotto da 15px */
+    font-size: 18px; /* Ridotto da 15px */
     text-align: center;
     line-height: 1.5; /* Migliore leggibilità */
 }
