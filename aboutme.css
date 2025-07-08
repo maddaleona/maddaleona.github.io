@@ -4,9 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body, html {
-    height: 90%;
+    min-height: 100vh;
+    padding-bottom: 80px;
     background-color: black;
     color: white;
     font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
@@ -15,7 +15,6 @@ body, html {
     justify-content: space-between;
     align-items: center;
 }
-
 /* Grid Container */
 .container {
     display: grid;
@@ -25,8 +24,8 @@ body, html {
     max-width: 1200px;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-template-rows: auto; /* Makes sure the rows will adapt */
+    margin-bottom: 20px;
 }
-
 /* Blocchi */
 .block {
     background-color: black;
@@ -37,20 +36,17 @@ body, html {
     justify-content: flex-start;
     align-items: center;
 }
-
 .fake-title {
     color: magenta;
     font-size: 25px;
     font-weight: bolder;
     text-align: center;
 }
-
 .real-par {
     color: white;
     font-size: 15px;
     text-align: center;
 }
-
 /* Blocchi specifici */
 /* Blocchi specifici */
 .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8 {
@@ -66,7 +62,6 @@ body, html {
     padding: 20px;
     height: 400px; /* Altezza fissa per tutti i blocchi */
 }
-
 /* Immagini */
 .block img {
     width: 100%;
@@ -74,23 +69,19 @@ body, html {
     object-fit: cover; /* Le immagini si adattano mantenendo il loro rapporto di aspetto */
     transition: transform 0.3s ease-in-out;
 }
-
 /* Effetto hover per l'immagine */
 .block:hover img {
     transform: scale(1.1);
 }
-
 /* Colored Link */
 .link-hover {
     color: magenta;
     text-decoration: none;
     transition: color 0.3s;
 }
-
 .link-hover:hover {
     color: lightblue;
 }
-
 /* Barra di navigazione */
 .navbar {
     position: fixed;
@@ -100,18 +91,15 @@ body, html {
     text-align: center;
     padding: 15px 0;
 }
-
 .navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 100px;
 }
-
 .navbar li {
     display: inline;
 }
-
 .navbar a {
     text-decoration: none;
     color: white;
@@ -120,11 +108,9 @@ body, html {
     position: relative;
     transition: color 0.3s ease;
 }
-
 .navbar a:hover {
     color: magenta;
 }
-
 .navbar a::after {
     content: '';
     position: absolute;
@@ -135,18 +121,15 @@ body, html {
     background-color: magenta;
     transition: width 0.3s ease;
 }
-
 .navbar a:hover::after, .navbar .active::after {
     width: 100%;
 }
-
 /* Media Queries */
 @media (max-width: 1024px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 @media (max-width: 767px) {
     .container {
         grid-template-columns: 1fr;
@@ -154,5 +137,15 @@ body, html {
     .navbar ul {
         flex-direction: column;
         gap: 20px;
+    }
+    /* Riduci l'altezza dei blocchi su mobile */
+    .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8 {
+        height: 250px; /* Invece di 400px */
+    }
+}
+/* Per schermi molto piccoli */
+@media (max-width: 480px) {
+    .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8 {
+        height: 200px; /* Ancora più piccoli */
     }
 }
