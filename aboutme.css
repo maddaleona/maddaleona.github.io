@@ -39,14 +39,16 @@ body, html {
 }
 .fake-title {
     color: magenta;
-    font-size: 25px;
+    font-size: 22px; /* Ridotto da 25px */
     font-weight: bolder;
     text-align: center;
+    margin-bottom: 10px; /* Aggiunto spazio sotto il titolo */
 }
 .real-par {
     color: white;
-    font-size: 15px;
+    font-size: 14px; /* Ridotto da 15px */
     text-align: center;
+    line-height: 1.5; /* Migliore leggibilità */
 }
 /* Blocchi specifici */
 /* Blocchi specifici */
@@ -64,10 +66,13 @@ body, html {
     height: 100%; /* Usa tutta l'altezza disponibile della cella */
 }
 
-/* Blocco 1 speciale per il testo - permette overflow */
-.block1 {
+/* Blocchi 1 e 3 speciali per il testo - permettono overflow */
+.block1, .block3 {
     overflow-y: auto; /* Permette scroll interno se il testo è troppo lungo */
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 /* Immagini */
 .block img {
