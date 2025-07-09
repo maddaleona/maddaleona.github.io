@@ -37,13 +37,13 @@ body, html {
 }
 .fake-title {
     color: magenta;
-    font-size: 25px;
+    font-size: 21px;
     font-weight: bolder;
     text-align: left;
 }
 .real-par {
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     text-align: left;
 }
 /* Colonna destra (due immagini) */
