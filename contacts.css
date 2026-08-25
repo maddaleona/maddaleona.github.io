@@ -70,7 +70,7 @@ body, html {
 
 /* Colored Link */
 .link-hover {
-    color: magenta;
+    color: #2C8C7C;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -111,7 +111,7 @@ body, html {
 }
 
 .navbar a:hover {
-    color: magenta;
+    color: #2C8C7C;
 }
 
 .navbar a::after {
@@ -121,7 +121,7 @@ body, html {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: magenta;
+    background-color: #2C8C7C;
     transition: width 0.3s ease;
 }
 
