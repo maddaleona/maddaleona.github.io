@@ -97,6 +97,7 @@ body, html {
     height: 100%;  /* Imposta un'altezza fissa */
     object-fit: cover; /* Le immagini si adattano mantenendo il loro rapporto di aspetto */
     transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
 }
 /* Effetto hover per l'immagine */
 .block:hover img {
