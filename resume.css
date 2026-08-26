@@ -22,7 +22,7 @@ body, html {
 
 .cv-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     height: calc(100vh - 80px);
     padding: 10px;
 
