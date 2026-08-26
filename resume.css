@@ -77,8 +77,7 @@ body, html {
 }
 
 
-/* Navigation */
-
+/* Barra di navigazione */
 .navbar {
     position: fixed;
     bottom: 0;
@@ -87,18 +86,15 @@ body, html {
     text-align: center;
     padding: 15px 0;
 }
-
 .navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 100px;
 }
-
 .navbar li {
     display: inline;
 }
-
 .navbar a {
     text-decoration: none;
     color: white;
@@ -107,11 +103,9 @@ body, html {
     position: relative;
     transition: color 0.3s ease;
 }
-
 .navbar a:hover {
     color: #2C8C7C;
 }
-
 .navbar a::after {
     content: '';
     position: absolute;
@@ -122,43 +116,34 @@ body, html {
     background-color: #2C8C7C;
     transition: width 0.3s ease;
 }
-
-.navbar a:hover::after {
+.navbar a:hover::after, .navbar .active::after {
     width: 100%;
 }
-
-
-/* Active Page */
-
-.navbar .active {
-    color: #2C8C7C;
+/* Media Queries */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
 }
-
-.navbar .active::after {
-    width: 100%;
-}
-
-
-/* Mobile */
-
 @media (max-width: 767px) {
-
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        height: auto; /* Permette lo scroll su mobile */
+    }
     body, html {
-        overflow-y: auto;
+        overflow-y: auto; /* Permette lo scroll su mobile */
     }
-
-    .cv-container {
-        height: calc(100vh - 150px);
-        padding: 10px;
-    }
-
-    .cv-cell {
-        width: 95%;
-        height: 80%;
-    }
-
     .navbar ul {
         flex-direction: column;
         gap: 20px;
+    }
+}
+/* Per schermi molto piccoli */
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, minmax(150px, auto));
     }
 }
